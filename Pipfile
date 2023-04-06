@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 termcolor = "*"
+pyyaml = "*"
+argparse = "*"
 
 [dev-packages]
 pylint = "==2.17.2"

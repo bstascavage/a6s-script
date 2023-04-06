@@ -1,0 +1,57 @@
+---
+initial:
+  text: "Everyone stack on A"
+  bold: true
+  newline: true
+
+first_water_input:
+  text: "First water debuff? "
+  input: true
+  variable: first_water
+  color: red
+
+first_water_confirm:
+  text: "The first water debuff is: {first_water}"
+  newline: true
+
+first_elem_swap_wait:
+  text: "Waiting for first Element Swap"
+  newline: true
+  sleep: 10
+
+second_water_input:
+  text: "Second water debuff? "
+  input: true
+  variable: second_water
+  color: red
+
+second_water_confirm:
+  text: "The second water debuff is: {second_water}"
+  newline: true
+
+post_first_water_sprout_lightning:
+  text: "Panic and {first_water} on A"
+  bold: true
+
+post_first_water_sprout_misc:
+  text: "Everyone else, stack south of the boss"
+  bold: true
+  newline: true
+
+second_elem_swap_wait:
+  text: "Waiting for second Element Swap"
+  newline: true
+  sleep: 10
+
+second_elem_swap:
+  text: "Element Swap! Everyone but {first_water} stack at 3\nAfter swap, everyone stack north of boss\nSpread after AOEs"
+  bold: true
+  newline: true
+  sleep: 5
+
+after_second_fire_pre:
+  text: "After second fire AOEs"
+
+after_second_fire:
+  text: "Spread for beams. {first_water} and {second_water} goes NW of boss.\nEveryone else goes south of boss after beams"
+  bold: true

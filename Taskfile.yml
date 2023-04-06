@@ -28,5 +28,10 @@ tasks:
 
   run:
     desc: Run the Python script
+    vars:
+      RAID: "{{coalesce .raid .RAID }}"
+    preconditions:
+      - sh: test "{{ .RAID }}" != "<no value>"
+        msg: Required variable 'RAID' not set.
     cmds:
-      - PIPENV_VENV_IN_PROJECT=1 pipenv run python main.py
+      - PIPENV_VENV_IN_PROJECT=1 pipenv run python main.py -r {{.RAID}}
