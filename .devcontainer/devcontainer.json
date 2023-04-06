@@ -9,7 +9,7 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sh -c \"$(curl --location https://taskfile.dev/install.sh)\" -- -d -b ~/.local/bin; pip install pre-commit",
+  "postCreateCommand": "sh -c \"$(curl --location https://taskfile.dev/install.sh)\" -- -d -b ~/.local/bin; pip install pre-commit; task clean; task init dev=true",
   "customizations": {
     "vscode": {
       "extensions": [
