@@ -43,8 +43,12 @@ second_elem_swap_wait:
   newline: true
   sleep: 10
 
-second_elem_swap:
-  text: "Element Swap! Everyone but {first_water} stack at 3\nAfter swap, everyone stack north of boss\nSpread after AOEs"
+second_elem_swap_1:
+  text: "Element Swap! Everyone but {first_water} stack at 3"
+  bold: true
+
+second_elem_swap_2:
+  text: "After swap, everyone stack north of boss\nSpread after AOEs"
   bold: true
   newline: true
   sleep: 5
@@ -52,6 +56,11 @@ second_elem_swap:
 after_second_fire_pre:
   text: "After second fire AOEs"
 
-after_second_fire:
-  text: "Spread for beams. {first_water} and {second_water} goes NW of boss.\nEveryone else goes south of boss after beams"
+after_second_fire_1:
+  text: "Spread for beams. {first_water} and {second_water} goes NW of boss."
+  bold: true
+  newline: true
+
+after_second_fire_2:
+  text: "Everyone else goes south of boss after beams"
   bold: true
