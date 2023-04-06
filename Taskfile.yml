@@ -3,8 +3,22 @@ version: "3"
 tasks:
   init:
     desc: Initialize Python with required tools
+    vars:
+      DEV: '{{ coalesce .dev .DEV "false" }}'
     cmds:
-      - PIPENV_VENV_IN_PROJECT=1 pipenv sync -d
+      - |
+        args=(
+        sync
+        )
+        if [ "{{.DEV}}" == "true" ]; then
+          args+=(-d)
+        fi
+        PIPENV_VENV_IN_PROJECT=1 pipenv "${args[@]}"
+
+  clean:
+    desc: Fully uninstalls virtual environment
+    cmds:
+      - rm -rf .venv
 
   validate:
     desc: Validate the pre-commit hooks
