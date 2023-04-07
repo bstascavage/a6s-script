@@ -19,7 +19,7 @@
         "esbenp.prettier-vscode"
       ]
     }
-  },
+  }
   // "runArgs": [
   //   "-v", "${localEnv:HOME}/.gnupg/pubring.kbx:/workspaces/a6s-script/.gnupg/pubring.kbx",
   //   "-v", "${localEnv:HOME}/.gnupg/S.gpg-agent:/workspaces/a6s-script/.gnupg/S.gpg-agent:ro",
@@ -28,5 +28,5 @@
   // Configure tool-specific properties.
   // "customizations": {},
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  "remoteUser": "root"
+  // "remoteUser": "root"
 }

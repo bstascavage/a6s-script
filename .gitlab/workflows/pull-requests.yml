@@ -1,0 +1,15 @@
+name: Pull request CI
+run-name: Running CI for PR to "${{ github.base_ref }}" from "${{ github.head_ref	}}"
+on:
+  - pull_request
+jobs:
+  pre-commit-ci-lite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      # - uses: creyD/prettier_action@v4.2
+      - uses: pre-commit/action@v3.0.0
+      - uses: pre-commit-ci/lite-action@v1.0.0
+        if: always()
