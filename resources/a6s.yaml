@@ -1,6 +1,6 @@
 ---
 initial:
-  text: "Everyone stack on A"
+  text: "Everyone stack on B"
   bold: true
   newline: true
 
@@ -19,6 +19,15 @@ first_elem_swap_wait:
   newline: true
   sleep: 10
 
+post_first_water_sprout_lightning:
+  text: "Panic and {first_water} on B"
+  bold: true
+
+post_first_water_sprout_misc:
+  text: "Everyone else, stack south of the boss"
+  bold: true
+  newline: true
+
 second_water_input:
   text: "Second water debuff? "
   input: true
@@ -29,22 +38,13 @@ second_water_confirm:
   text: "The second water debuff is: {second_water}"
   newline: true
 
-post_first_water_sprout_lightning:
-  text: "Panic and {first_water} on A"
-  bold: true
-
-post_first_water_sprout_misc:
-  text: "Everyone else, stack south of the boss"
-  bold: true
-  newline: true
-
 second_elem_swap_wait:
   text: "Waiting for second Element Swap"
   newline: true
   sleep: 10
 
 second_elem_swap_1:
-  text: "Element Swap! Everyone but {first_water} stack at 3"
+  text: "Element Swap! Everyone but {first_water} stack at 2"
   bold: true
 
 second_elem_swap_2:
